@@ -2,39 +2,45 @@ package controller;
 
 import model.Student;
 import model.Teacher;
-import service.DataStudyGroup;
+import model.User;
+import service.DataStudent;
+import service.DataTeacher;
+import view.StudentView;
+import view.TeacherView;
 
 import java.util.List;
 
 public class Controller {
-    private List<Student> studentList;
-    private List<Teacher> teacherList;
+    private DataTeacher dataTeacher;
+    private DataStudent dataStudent;
+    private StudentView studentView;
+    private TeacherView teacherView;
 
-    public Controller() {
+    public void start() {
+        User user1 = new Student("Юрий", 21, 4.5);
+        User user2 = new Teacher("Иван", 40, "math");
+        User user3 = new Student("Bill",20, 5.0);
+        createStudent(user1);
+        createTeacher(user2);
+        createStudent(user3);
+        List<Student> studentList = dataStudent.read();
+        studentView.printStudent(studentList);
 
     }
+
 
     /**
      * Создать метод в Контроллере, в котором агрегируются функции получения
      * списка студентов (их id) и преподавателя (его id) и формирования учебной группы,
      * путём вызова метода из сервиса;
      */
-
-
-    public List<Student> createArrayStudent (Student student) {
-        student.setStudentId(studentList.size()+1);
-        studentList.add(student);
-        return studentList;
+    public Student createStudent(User user) {
+        return dataStudent.create(user);
+    }
+    public Teacher createTeacher(User user) {
+        return dataTeacher.create(user);
     }
 
-    public Teacher createArrayTeacher(Teacher teacher) {
-        teacher.setTeacherId(teacherList.size()+1);
-        teacherList.add(teacher);
-        return teacher;
-    }
 
-    public DataStudyGroup createStudyGroup(Teacher teacher) {
-        DataStudyGroup studyGroup = new DataStudyGroup(teacher, studentList);
-        return studyGroup;
-    }
+
 }

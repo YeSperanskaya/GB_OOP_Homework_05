@@ -2,8 +2,11 @@ package model;
 
 public class Student extends User {
     private int studentId;
-    public Student(String name, int age) {
+    private double average;
+
+    public Student(String name, int age, double average) {
         super(name, age);
+        this.average = average;
     }
 
     public int getStudentId() {

@@ -2,8 +2,11 @@ package model;
 
 public class Teacher extends User{
     private int teacherId;
-    public Teacher(String name, int age) {
+    private String subject;
+
+    public Teacher(String name, int age, String subject) {
         super(name, age);
+        this.subject = subject;
     }
 
     public int getTeacherId() {

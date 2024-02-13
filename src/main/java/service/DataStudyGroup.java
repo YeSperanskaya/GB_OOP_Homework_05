@@ -5,7 +5,7 @@ import model.Teacher;
 
 import java.util.List;
 
-public class DataStudyGroup {
+public class DataStudyGroup implements StudyGroupService{
     private Teacher teacher;
     private List<Student> studentList;
 
