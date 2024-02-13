@@ -2,7 +2,7 @@ package controller;
 
 import model.Student;
 import model.Teacher;
-import service.StudyGroup;
+import service.DataStudyGroup;
 
 import java.util.List;
 
@@ -11,8 +11,7 @@ public class Controller {
     private List<Teacher> teacherList;
 
     public Controller() {
-        this.studentList = studentList;
-        this.teacherList = teacherList;
+
     }
 
     /**
@@ -34,8 +33,8 @@ public class Controller {
         return teacher;
     }
 
-    public StudyGroup createStudyGroup(Teacher teacher) {
-        StudyGroup studyGroup = new StudyGroup(teacher, studentList);
+    public DataStudyGroup createStudyGroup(Teacher teacher) {
+        DataStudyGroup studyGroup = new DataStudyGroup(teacher, studentList);
         return studyGroup;
     }
 }

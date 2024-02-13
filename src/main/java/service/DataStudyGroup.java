@@ -5,11 +5,11 @@ import model.Teacher;
 
 import java.util.List;
 
-public class StudyGroup {
+public class DataStudyGroup {
     private Teacher teacher;
     private List<Student> studentList;
 
-    public StudyGroup(Teacher teacher, List<Student> studentList) {
+    public DataStudyGroup(Teacher teacher, List<Student> studentList) {
         this.teacher = teacher;
         this.studentList = studentList;
     }

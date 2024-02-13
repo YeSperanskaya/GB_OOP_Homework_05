@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface StudyGroupService {
 
-    static StudyGroup createStudyGroup(Teacher teacher, List<Student> studentList) {
-        StudyGroup studyGroup = new StudyGroup(teacher, studentList);
+    static DataStudyGroup createStudyGroup(Teacher teacher, List<Student> studentList) {
+        DataStudyGroup studyGroup = new DataStudyGroup(teacher, studentList);
         return studyGroup;
     }
 
