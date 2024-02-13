@@ -1,3 +1,7 @@
+import controller.Controller;
+import model.Student;
+import model.Teacher;
+
 /**
  * — Создать класс УчебнаяГруппа, содержащий в себе поля Преподаватель и список Студентов;
  * — Создать класс УчебнаяГруппаСервис, в котором реализована функция
@@ -12,4 +16,11 @@
 
 
 public class Main {
+    Student student1 = new Student("Вася", 32);
+    Student student2 = new Student("Петя", 19);
+    Student student3 = new Student("Вадим", 21);
+    Teacher teacher = new Teacher("Иван Иванович", 58);
+
+    Controller controller = new Controller();
+
 }
