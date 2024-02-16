@@ -19,8 +19,8 @@ public class DataTeacher implements ServiceTeacher{
     }
 
     @Override
-    public List<Teacher> read() {
-        return listTeacher;
+    public Teacher read(int num) {
+        return listTeacher.get(num);
     }
 
     public DataTeacher() {

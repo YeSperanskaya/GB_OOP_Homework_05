@@ -20,9 +20,10 @@ public class Teacher extends User{
     @Override
     public String toString() {
         return "Teacher{" +
-                "teacherId=" + teacherId +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", age=" + age +
+                ", teacherId=" + teacherId +
+                ", subject='" + subject + '\'' +
                 '}';
     }
 }

@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface ServiceTeacher {
     Teacher create(User user);
-    List<Teacher> read();
+    Teacher read(int num);
 }

@@ -16,10 +16,7 @@ import model.Teacher;
 
 
 public class Main {
-//    Student student1 = new Student("Вася", 32);
-//    Student student2 = new Student("Петя", 19);
-//    Student student3 = new Student("Вадим", 21);
-//    Teacher teacher = new Teacher("Иван Иванович", 58);
+
 
     public static void main(String[] args) {
         Controller controller = new Controller();
