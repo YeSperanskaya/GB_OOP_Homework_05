@@ -21,7 +21,11 @@ public class Main {
 //    Student student3 = new Student("Вадим", 21);
 //    Teacher teacher = new Teacher("Иван Иванович", 58);
 
-    Controller controller = new Controller();
+    public static void main(String[] args) {
+        Controller controller = new Controller();
+        controller.start();
+    }
+
 
 
 }

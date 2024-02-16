@@ -22,4 +22,7 @@ public class DataTeacher implements ServiceTeacher{
     public List<Teacher> read() {
         return listTeacher;
     }
+
+    public DataTeacher() {
+    }
 }
